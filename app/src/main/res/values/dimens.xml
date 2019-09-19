@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_top">14dp</dimen>
-    <dimen name="size_account_login">18sp</dimen>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="size_account_login">19sp</dimen>
+    <dimen name="border">2dp</dimen>
+    <dimen name="radius">15</dimen>
+    <dimen name="padding_left">10dp</dimen>
 </resources>

@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <EditText
-        android:text="@string/email_or_numberPhone"
-        android:textSize="@dimen/size_account_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_top"
+        android:background="@drawable/background_login">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/input_email"
+            android:hint="@string/email_or_numberPhone"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="20"
+            android:drawableLeft="@drawable/ic_smartphone_with_email"
+            android:drawablePadding="@dimen/padding_left"
+            android:textColor="@color/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_autoValidate="true"
+            app:met_minCharacters="8"
+         />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/imput_pasword"
+            android:hint="@string/password"
+            android:textSize="@dimen/size_account_login"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="@dimen/padding_left"
+            android:textColor="@color/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+           />
+    </LinearLayout>
+</layout>
