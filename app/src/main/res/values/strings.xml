@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">PerfectHostel</string>
     <string name="email_or_numberPhone">Nhập Email hoặc Số điện thoại</string>
-    <string name="password">Nhập Password</string>
+    <string name="password">Nhập Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="register">Đăng kí</string>
+    <string name="forgetpassword">Quên mật khẩu</string>
+    <string name="confirm">Nhập lại Mật khẩu</string>
+    <string name="exit">Thoát</string>
 </resources>

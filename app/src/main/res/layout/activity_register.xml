@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
         <variable
             name="listener"
-            type="com.t3h.perfecthostel.activity.login.LoginListener" />
+            type="com.t3h.perfecthostel.activity.register.RegisterListener" />
     </data>
-
     <ScrollView
         android:orientation="vertical" android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:padding="@dimen/margin_top"
         android:background="@drawable/background_login">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -46,6 +45,16 @@
                 android:inputType="textPassword"
                 app:met_floatingLabel="highlight" />
 
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_shield"
+                android:drawablePadding="@dimen/padding_left"
+                android:hint="@string/confirm"
+                android:inputType="textPassword"
+                app:met_floatingLabel="highlight" />
+
             <LinearLayout
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_width="match_parent"
@@ -55,35 +64,22 @@
 
                 <Button
                     android:id="@+id/dangnhap"
-                    android:text="@string/login"
-                    android:background="@drawable/background_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="false"
-                    android:onClick="@{v -> listener.onClickedLogin()}"/>
-                <Button
-                    android:id="@+id/dangki"
-                    android:layout_marginLeft="@dimen/margin_top"
                     android:text="@string/register"
                     android:background="@drawable/background_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAllCaps="false"
                     android:onClick="@{v -> listener.onClickedRegister()}"/>
+                <Button
+                    android:id="@+id/dangki"
+                    android:layout_marginLeft="@dimen/margin_top"
+                    android:text="@string/exit"
+                    android:background="@drawable/background_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:onClick="@{v -> listener.onClickedExit()}"/>
             </LinearLayout>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:text="@string/forgetpassword"
-                android:layout_width="match_parent"
-                android:gravity="right"
-                android:textStyle="italic"
-                android:layout_marginTop="@dimen/margin_top"
-                android:layout_height="wrap_content"
-                android:textColor="@color/svg"
-                android:textSize="@dimen/text_normal"
-                android:autoLink="all"
-                android:onClick="@{v -> listener.onForgotPass()}"
-                />
 
 
         </LinearLayout>
