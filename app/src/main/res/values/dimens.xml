@@ -6,4 +6,5 @@
     <dimen name="border">2dp</dimen>
     <dimen name="radius">15dp</dimen>
     <dimen name="padding_left">10dp</dimen>
+    <dimen name="padding10">10dp</dimen>
 </resources>

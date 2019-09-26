@@ -1,5 +1,6 @@
 package com.t3h.perfecthostel.activity.register;
 
+import android.content.Intent;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -8,6 +9,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.t3h.perfecthostel.R;
+import com.t3h.perfecthostel.activity.login.LoginActivity;
 import com.t3h.perfecthostel.base.BaseActivity;
 import com.t3h.perfecthostel.databinding.ActivityRegisterBinding;
 
@@ -41,7 +43,8 @@ public class RegisterActivity extends BaseActivity<ActivityRegisterBinding> impl
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(RegisterActivity.this, "Đăng kí thành công!", Toast.LENGTH_SHORT).show();
-                        startActivity();
+                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                        finish();
                     }
                 }
             });

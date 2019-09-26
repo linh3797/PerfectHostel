@@ -7,4 +7,6 @@
     <string name="forgetpassword">Quên mật khẩu</string>
     <string name="confirm">Nhập lại Mật khẩu</string>
     <string name="exit">Thoát</string>
+
+    <string name="toast_null">Không được để trống các trường</string>
 </resources>
