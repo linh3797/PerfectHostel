@@ -9,4 +9,10 @@
     <string name="exit">Thoát</string>
 
     <string name="toast_null">Không được để trống các trường</string>
+    <string name="home">Trang Chủ</string>
+    <string name="list">Danh sách</string>
+    <string name="takePhoto">Chụp màn hình</string>
+    <string name="mine">Của Tôi</string>
+    <string name="chat">Chat</string>
+    <string name="manage">Quản Lý Tài Khoản</string>
 </resources>
