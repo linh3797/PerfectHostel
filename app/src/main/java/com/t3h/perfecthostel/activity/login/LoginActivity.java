@@ -46,7 +46,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> implements
         String password = binding.pasword.getText().toString();
 
         if (userName.isEmpty() || password.isEmpty()) {
-            showFullyCustomToast();
+            Toast.makeText(this, "Không được để trống các trường!", Toast.LENGTH_SHORT).show();
             return;
         }
         mAuth.signInWithEmailAndPassword(userName, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -77,20 +77,20 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> implements
     private void showFullyCustomToast() {
         // Get the custom layout view.
 
-        View toastView = getLayoutInflater().inflate(R.layout.activity_toast_custom_view, null);
-        ImageView im = toastView.findViewById(R.id.customToastImage);
-        Glide.with(im)
-                .load(R.drawable.ic_cancel)
-                .into(im);
-        TextView tv = toastView.findViewById(R.id.customToastText);
-        tv.setText(getResources().getString(R.string.toast_null));
-        // Initiate the Toast instance.
-        Toast toast = new Toast(getApplicationContext());
-        // Set custom view in toast.
-        toast.setView(toastView);
-        toast.setDuration(Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.BOTTOM, 0, 120);
-        toast.show();
+//        View toastView = getLayoutInflater().inflate(R.layout.activity_toast_custom_view, null);
+////        ImageView im = toastView.findViewById(R.id.customToastImage);
+////        Glide.with(im)
+////                .load(R.drawable.ic_cancel)
+////                .into(im);
+//        TextView tv = toastView.findViewById(R.id.customToastText);
+//        tv.setText(getResources().getString(R.string.toast_null));
+//        // Initiate the Toast instance.
+//        Toast toast = new Toast(getApplicationContext());
+//        // Set custom view in toast.
+//        toast.setView(toastView);
+//        toast.setDuration(Toast.LENGTH_SHORT);
+//        toast.setGravity(Gravity.BOTTOM, 0, 120);
+//        toast.show();
     }
 
 }
