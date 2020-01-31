@@ -33,7 +33,8 @@
                 android:drawablePadding="@dimen/padding_left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:met_floatingLabel="highlight" />
+                app:met_floatingLabel="highlight"
+                android:inputType="textEmailAddress"/>
 
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/pasword"

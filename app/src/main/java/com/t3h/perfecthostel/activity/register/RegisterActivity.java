@@ -22,15 +22,17 @@ public class RegisterActivity extends BaseActivity<ActivityRegisterBinding> impl
         return R.layout.activity_register;
     }
 
+    public static final String TAG = RegisterActivity.class.getSimpleName();
     @Override
     protected void initView() {
+        overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
         binding.setListener(this);
     }
 
     @Override
     public void onClickedRegister() {
-        String userName = binding.username.getText().toString();
-        String password = binding.pasword.getText().toString();
+        String userName = binding.username.getText().toString().trim();
+        String password = binding.pasword.getText().toString().trim();
         String confirmPassword = binding.confirmPassword.getText().toString();
 
         if (!password.equals(confirmPassword)) {
@@ -53,6 +55,6 @@ public class RegisterActivity extends BaseActivity<ActivityRegisterBinding> impl
 
     @Override
     public void onClickedExit() {
-
+        finish();
     }
 }

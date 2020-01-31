@@ -2,6 +2,7 @@ package com.t3h.perfecthostel.activity.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,8 @@ import com.t3h.perfecthostel.databinding.ActivityLoginBinding;
  */
 public class LoginActivity extends BaseActivity<ActivityLoginBinding> implements LoginListener {
 
+    public static final String TAG = LoginActivity.class.getSimpleName();
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_login;
@@ -42,11 +45,12 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> implements
 
     @Override
     public void onClickedLogin() {
-        final String userName = binding.username.getText().toString();
-        String password = binding.pasword.getText().toString();
+        overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
+        final String userName = binding.username.getText().toString().trim();
+        String password = binding.pasword.getText().toString().trim();
 
         if (userName.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Không được để trống các trường!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.not_empty_field, Toast.LENGTH_SHORT).show();
             return;
         }
         mAuth.signInWithEmailAndPassword(userName, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -56,6 +60,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> implements
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     finish();
                 } else {
+                    Log.e(TAG, "onComplete: ", task.getException() );
                     Toast.makeText(LoginActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
                 }
             }
@@ -65,6 +70,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> implements
 
     @Override
     public void onClickedRegister() {
+        overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivityForResult(intent, Const.REQUEST_REGISTER);
     }
@@ -75,13 +81,13 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> implements
     }
 
     private void showFullyCustomToast() {
-        // Get the custom layout view.
+       //  Get the custom layout view.
 
-//        View toastView = getLayoutInflater().inflate(R.layout.activity_toast_custom_view, null);
-////        ImageView im = toastView.findViewById(R.id.customToastImage);
-////        Glide.with(im)
-////                .load(R.drawable.ic_cancel)
-////                .into(im);
+//        View toastView = getLayoutInflater().inflate(R.layout.support_simple_spinner_dropdown_item, null);
+//        ImageView im = toastView.findViewById(R.id.customToastImage);
+//        Glide.with(im)
+//                .load(R.drawable.ic_cancel)
+//                .into(im);
 //        TextView tv = toastView.findViewById(R.id.customToastText);
 //        tv.setText(getResources().getString(R.string.toast_null));
 //        // Initiate the Toast instance.

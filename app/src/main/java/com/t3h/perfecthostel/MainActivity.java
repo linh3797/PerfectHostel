@@ -1,18 +1,16 @@
 package com.t3h.perfecthostel;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.Environment;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.t3h.perfecthostel.base.BaseActivity;
@@ -61,6 +59,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements B
 
     @Override
     protected void initView() {
+        overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
         actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.home));
         loadFragment(homeFragment);
@@ -76,7 +75,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements B
                 return true;
             case R.id.list:
                 loadFragment(listFragment);
-                actionBar.setTitle(getResources().getString(R.string.list) + " Bài Đăng");
+                actionBar.setTitle(getResources().getString(R.string.list));
                 return true;
             case R.id.takePhoto:
                 takeScreenshot();

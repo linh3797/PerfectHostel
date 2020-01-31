@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "553285809780",
-    "firebase_url": "https://perfecthostel-44972.firebaseio.com",
-    "project_id": "perfecthostel-44972",
-    "storage_bucket": "perfecthostel-44972.appspot.com"
+    "project_number": "411891933424",
+    "firebase_url": "https://perfecthostel-2b90b.firebaseio.com",
+    "project_id": "perfecthostel-2b90b",
+    "storage_bucket": "perfecthostel-2b90b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:553285809780:android:b50733f9873b52c8828321",
+        "mobilesdk_app_id": "1:411891933424:android:88a31d0239181c3c076235",
         "android_client_info": {
           "package_name": "com.t3h.perfecthostel"
         }
       },
       "oauth_client": [
         {
-          "client_id": "553285809780-t2ph1r5kp4ba9vtfs462utoanqlqjhqj.apps.googleusercontent.com",
+          "client_id": "411891933424-dl1l0be2uedl57i775daqan8cc0g1jhd.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.t3h.perfecthostel",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "553285809780-h3qcfprqqmbub228d11d8sten9fp4g63.apps.googleusercontent.com",
+          "client_id": "411891933424-slcfltep1jkpej15bkanu2q2utplivb9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB7lbrpxvN9u3xvie1m13-xBtJHHwqf0LQ"
+          "current_key": "AIzaSyDaO0P-_FCWal9WLUfL6nbCCylGfVfwlgo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "553285809780-h3qcfprqqmbub228d11d8sten9fp4g63.apps.googleusercontent.com",
+              "client_id": "411891933424-slcfltep1jkpej15bkanu2q2utplivb9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -15,4 +15,5 @@
     <string name="mine">Của Tôi</string>
     <string name="chat">Chat</string>
     <string name="manage">Quản Lý Tài Khoản</string>
+    <string name="not_empty_field">Không được để trống các trường!</string>
 </resources>

@@ -29,6 +29,7 @@
 
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/username"
+                android:inputType="textEmailAddress"
                 android:hint="@string/email_or_numberPhone"
                 android:drawableLeft="@drawable/ic_smartphone_with_email"
                 android:drawablePadding="@dimen/padding_left"
@@ -84,8 +85,6 @@
                 android:autoLink="all"
                 android:onClick="@{v -> listener.onForgotPass()}"
                 />
-
-
         </LinearLayout>
 
 

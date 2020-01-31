@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public abstract class BaseActivity <DB extends ViewDataBinding> extends AppCompatActivity {
     protected DB binding;
     protected FirebaseAuth mAuth;
+    protected static final String TAG = "PerfectHostel";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
