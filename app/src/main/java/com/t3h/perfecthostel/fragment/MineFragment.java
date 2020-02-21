@@ -10,6 +10,11 @@ import com.t3h.perfecthostel.databinding.MineFragmentBinding;
 public class MineFragment extends Basefragment<MineFragmentBinding> {
 
     @Override
+    protected void initViewFragment() {
+
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.mine_fragment;
     }

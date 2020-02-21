@@ -7,4 +7,6 @@
     <dimen name="radius">15dp</dimen>
     <dimen name="padding_left">10dp</dimen>
     <dimen name="padding10">10dp</dimen>
+    <dimen name="hostel_0dp">0dp</dimen>
+    <dimen name="hostel_100dp">100dp</dimen>
 </resources>

@@ -10,6 +10,11 @@ import com.t3h.perfecthostel.databinding.ChatFragmentBinding;
 public class ChatFragment extends Basefragment<ChatFragmentBinding> {
 
     @Override
+    protected void initViewFragment() {
+
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.chat_fragment;
     }

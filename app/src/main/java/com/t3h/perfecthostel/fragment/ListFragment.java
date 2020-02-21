@@ -10,6 +10,11 @@ import com.t3h.perfecthostel.databinding.ListFragmentBinding;
 public class ListFragment extends Basefragment<ListFragmentBinding> {
 
     @Override
+    protected void initViewFragment() {
+
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.list_fragment;
     }
